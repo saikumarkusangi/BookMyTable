@@ -6,4 +6,5 @@ class Themes {
   static const primarytextColor = Colors.white;
   static const secondtextColor = Colors.black;
   static const lightBlack = Colors.black45;
+  static const transparent = Colors.transparent;
 }

@@ -23,6 +23,7 @@ class _CuratedCollectionsPageState extends State<CuratedCollectionsPage> {
         ),),
       ),
       body:  SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Expanded(
           child: Column(
             children:const [
