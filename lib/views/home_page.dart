@@ -60,55 +60,53 @@ class _HomePageState extends State<HomePage> {
         ),
         body: SingleChildScrollView(
             //padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Expanded(
-          child: Column(
-            
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // banner
-              Image.asset("assets/images/bg.png"),
+            child: Column(
+              
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // banner
+                Image.asset("assets/images/bg.png"),
 
-              //  Curated Collections
+                //  Curated Collections
 
-              CommonListTile(
-                  label: "Curated Collections",
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              const CuratedCollectionsPage()))),
-              const CuratedCollections(
-                crossAxisCount: 2,
-                childAxisRatio: 1.5,
-              ),
+                CommonListTile(
+                    label: "Curated Collections",
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const CuratedCollectionsPage()))),
+                const CuratedCollections(
+                  crossAxisCount: 2,
+                  childAxisRatio: 1.5,
+                ),
 
-              // Trending Restaurants
+                // Trending Restaurants
 
-              CommonListTile(
-                  label: "Trending Restaurants",
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              const TrendingRestaurantPage()))),
-              const TrendingRestaurants(scrollDirection: Axis.horizontal),
+                CommonListTile(
+                    label: "Trending Restaurants",
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const TrendingRestaurantPage()))),
+                const TrendingRestaurants(scrollDirection: Axis.horizontal),
 
-              //  Tops picks
-              const Padding(
-                padding: EdgeInsets.only(top: 20),
-                child: ListTile(
-                  title: Text(
-                    "Top Picks",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800),
+                //  Tops picks
+                const Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: ListTile(
+                    title: Text(
+                      "Top Picks",
+                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800),
+                    ),
                   ),
                 ),
-              ),
-              const TopPicks()
-            ],
-          ),
-        )),
+                const TopPicks()
+              ],
+            )),
       ),
     );
   }

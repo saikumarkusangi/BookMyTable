@@ -25,15 +25,13 @@ class _TrendingRestaurantPageState extends State<TrendingRestaurantPage> {
       ),
       body:  SingleChildScrollView(
         physics:const BouncingScrollPhysics(),
-        child: Expanded(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              SizedBox(height: 20),
-               TrendingRestaurants(scrollDirection:Axis.vertical),
-               
-            ],
-          ),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            SizedBox(height: 20),
+             TrendingRestaurants(scrollDirection:Axis.vertical),
+             
+          ],
         ),
       ));
   }

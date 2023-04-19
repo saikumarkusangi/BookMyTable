@@ -32,36 +32,34 @@ class TrendingRestaurants extends ConsumerWidget {
             children: [
               SizedBox(
                 height: 320,
-                child: Expanded(
-                  child: GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 1,
-                    ),
-                    scrollDirection: scrollDirection,
-                    itemCount: results.length,
-                    shrinkWrap: true,
-                    physics: const BouncingScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      return Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 0.0, vertical: 10),
-                          child: InkWell(
-                            onTap: ()=> Navigator.push(context,MaterialPageRoute(builder: (_)=>
-                            DetailsPage(
-                              name: results[index].name,
-                              menu: results[index].menu,
-                              mobile: results[index].phoneNumber,
-                              rating: results[index].rating.toString(),
-                              description:results[index].description,
-                              image: results[index].image,))),
-                            child: CustomCard(
-                                description: results[index].description,
-                                image: results[index].image,
-                                rating: results[index].rating.toString(),
-                                name: results[index].name),
-                          ));
-                    },
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1,
                   ),
+                  scrollDirection: scrollDirection,
+                  itemCount: results.length,
+                  shrinkWrap: true,
+                  physics: const BouncingScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 0.0, vertical: 10),
+                        child: InkWell(
+                          onTap: ()=> Navigator.push(context,MaterialPageRoute(builder: (_)=>
+                          DetailsPage(
+                            name: results[index].name,
+                            menu: results[index].menu,
+                            mobile: results[index].phoneNumber,
+                            rating: results[index].rating.toString(),
+                            description:results[index].description,
+                            image: results[index].image,))),
+                          child: CustomCard(
+                              description: results[index].description,
+                              image: results[index].image,
+                              rating: results[index].rating.toString(),
+                              name: results[index].name),
+                        ));
+                  },
                 ),
               ),
             
@@ -71,36 +69,34 @@ class TrendingRestaurants extends ConsumerWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               SizedBox(
-                child: Expanded(
-                  child: GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 1,
-                    ),
-                    scrollDirection: scrollDirection,
-                    itemCount: results.length,
-                    shrinkWrap: true,
-                    physics: const BouncingScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      return Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 0.0, vertical: 10),
-                          child: InkWell(
-                           onTap: ()=> Navigator.push(context,MaterialPageRoute(builder: (_)=> DetailsPage(
-                            
-                             name: results[index].name,
-                              menu: results[index].menu,
-                              mobile: results[index].phoneNumber,
-                              rating: results[index].rating.toString(),
-                              description:results[index].description,
-                              image: results[index].image,))),
-                            child: CustomCard(
-                                description: results[index].description,
-                                image: results[index].image,
-                                rating: results[index].rating.toString(),
-                                name: results[index].name),
-                          ));
-                    },
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1,
                   ),
+                  scrollDirection: scrollDirection,
+                  itemCount: results.length,
+                  shrinkWrap: true,
+                  physics: const BouncingScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 0.0, vertical: 10),
+                        child: InkWell(
+                         onTap: ()=> Navigator.push(context,MaterialPageRoute(builder: (_)=> DetailsPage(
+                          
+                           name: results[index].name,
+                            menu: results[index].menu,
+                            mobile: results[index].phoneNumber,
+                            rating: results[index].rating.toString(),
+                            description:results[index].description,
+                            image: results[index].image,))),
+                          child: CustomCard(
+                              description: results[index].description,
+                              image: results[index].image,
+                              rating: results[index].rating.toString(),
+                              name: results[index].name),
+                        ));
+                  },
                 ),
               ),
             
