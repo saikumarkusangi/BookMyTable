@@ -1,15 +1,15 @@
 // To parse this JSON data, do
 //
-//     final restaurantsModel = restaurantsModelFromJson(jsonString);
+//     final topPicksModel = topPicksModelFromJson(jsonString);
 
 import 'dart:convert';
 
-List<RestaurantsModel> restaurantsModelFromJson(String str) => List<RestaurantsModel>.from(json.decode(str).map((x) => RestaurantsModel.fromJson(x)));
+List<TopPicksModel> topPicksModelFromJson(String str) => List<TopPicksModel>.from(json.decode(str).map((x) => TopPicksModel.fromJson(x)));
 
-String restaurantsModelToJson(List<RestaurantsModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String topPicksModelToJson(List<TopPicksModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class RestaurantsModel {
-    RestaurantsModel({
+class TopPicksModel {
+    TopPicksModel({
         required this.id,
         required this.name,
         required this.description,
@@ -18,6 +18,7 @@ class RestaurantsModel {
         required this.image,
         required this.menu,
         required this.rating,
+        required this.logo,
     });
 
     int id;
@@ -28,8 +29,9 @@ class RestaurantsModel {
     String image;
     String menu;
     double rating;
+    String logo;
 
-    factory RestaurantsModel.fromJson(Map<String, dynamic> json) => RestaurantsModel(
+    factory TopPicksModel.fromJson(Map<String, dynamic> json) => TopPicksModel(
         id: json["id"],
         name: json["name"],
         description: json["description"],
@@ -38,6 +40,7 @@ class RestaurantsModel {
         image: json["image"],
         menu: json["menu"],
         rating: json["rating"]?.toDouble(),
+        logo: json["logo"],
     );
 
     Map<String, dynamic> toJson() => {
@@ -49,5 +52,6 @@ class RestaurantsModel {
         "image": image,
         "menu": menu,
         "rating": rating,
+        "logo": logo,
     };
 }

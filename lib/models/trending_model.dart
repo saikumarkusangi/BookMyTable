@@ -1,15 +1,15 @@
 // To parse this JSON data, do
 //
-//     final restaurantsModel = restaurantsModelFromJson(jsonString);
+//     final trendingModel = trendingModelFromJson(jsonString);
 
 import 'dart:convert';
 
-List<RestaurantsModel> restaurantsModelFromJson(String str) => List<RestaurantsModel>.from(json.decode(str).map((x) => RestaurantsModel.fromJson(x)));
+List<TrendingModel> trendingModelFromJson(String str) => List<TrendingModel>.from(json.decode(str).map((x) => TrendingModel.fromJson(x)));
 
-String restaurantsModelToJson(List<RestaurantsModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String trendingModelToJson(List<TrendingModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class RestaurantsModel {
-    RestaurantsModel({
+class TrendingModel {
+    TrendingModel({
         required this.id,
         required this.name,
         required this.description,
@@ -29,7 +29,7 @@ class RestaurantsModel {
     String menu;
     double rating;
 
-    factory RestaurantsModel.fromJson(Map<String, dynamic> json) => RestaurantsModel(
+    factory TrendingModel.fromJson(Map<String, dynamic> json) => TrendingModel(
         id: json["id"],
         name: json["name"],
         description: json["description"],

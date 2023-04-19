@@ -18,10 +18,13 @@ class CommonListTile extends StatelessWidget {
         ),
         trailing: InkWell(
           onTap: onTap,
-          child: const Text(
-            "SEE ALL",
-            style: TextStyle(
-                color: Themes.accentColor, fontWeight: FontWeight.w600),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: const Text(
+              "SEE ALL",
+              style: TextStyle(
+                  color: Themes.accentColor, fontWeight: FontWeight.w600),
+            ),
           ),
         ),
       ),

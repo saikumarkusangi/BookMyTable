@@ -1,4 +1,5 @@
 import 'package:dinner_is_done/common/list_tile.dart';
+import 'package:dinner_is_done/common/shimmer_loading.dart';
 import 'package:flutter/material.dart';
 import '../themes/themes.dart';
 import '../utils/utils.dart';
@@ -61,12 +62,12 @@ class _HomePageState extends State<HomePage> {
             //padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Expanded(
           child: Column(
+            
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // banner
-
               Image.asset("assets/images/bg.png"),
 
               //  Curated Collections

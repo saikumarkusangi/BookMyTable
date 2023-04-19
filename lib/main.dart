@@ -1,12 +1,18 @@
+import 'package:dinner_is_done/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'themes/themes.dart';
 import 'views/views.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  runApp(const ProviderScope(child:  MyApp()));
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -31,7 +37,7 @@ class MyApp extends StatelessWidget {
       child: child!,
     );
       },
-      home: const HomePage()
+      home: const SplashScreen()
     );
   }
 }
@@ -43,3 +49,5 @@ class MyBehavior extends ScrollBehavior {
     return child;
   }
 }
+
+
