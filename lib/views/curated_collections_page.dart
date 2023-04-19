@@ -24,12 +24,10 @@ class _CuratedCollectionsPageState extends State<CuratedCollectionsPage> {
       ),
       body:  SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
-        child: Expanded(
-          child: Column(
-            children:const [
-              CuratedCollections(crossAxisCount: 1,childAxisRatio:2),
-            ],
-          ),
+        child: Column(
+          children:const [
+            CuratedCollections(crossAxisCount: 1,childAxisRatio:2),
+          ],
         ),
       ));
   }
